@@ -1,0 +1,22 @@
+This project was created to explain a problem on the jersey forum.
+
+The issue is that namespaces do not seem to work correctly for me.
+
+I'm running 
+
+java version "1.6.0_26"
+Java(TM) SE Runtime Environment (build 1.6.0_26-b03-383-11A511)
+Java HotSpot(TM) 64-Bit Server VM (build 20.1-b02-383, mixed mode)
+
+on a mac version 10.7.1
+
+I'm also using maven
+
+Apache Maven 3.0.3 (r1075438; 2011-02-28 18:31:09+0100)
+Maven home: /data/install/maven
+Java version: 1.6.0_26, vendor: Apple Inc.
+Java home: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+Default locale: en_US, platform encoding: MacRoman
+OS name: "mac os x", version: "10.7.1", arch: "x86_64", family: "mac"
+
+
