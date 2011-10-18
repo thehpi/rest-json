@@ -32,7 +32,7 @@ public class MyJaxbBeans
 		this.quantity = quantity;
 	}
 
-	@XmlElement(name = "bean")
+	@XmlElement(name = "bean", namespace = "http://thehpi.com/mybean")
 	public List<MyJaxbBean> getBeans()
 	{
 		if (this.beans == null) {
