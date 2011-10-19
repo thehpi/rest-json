@@ -1,4 +1,4 @@
-package com.thehpi.model;
+package com.thehpi;
 
 import java.util.HashMap;
 import java.util.Map;

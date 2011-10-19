@@ -43,27 +43,6 @@
                                                 <encoding>UTF-8</encoding>
                                         </configuration>
                                 </plugin>
-
-			<plugin>
-				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb2-plugin</artifactId>
-				<version>0.8.0</version>
-				<executions>
-					<execution>
-						<id>invoices</id>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<generateDirectory>${project.build.directory}/generated-sources/xjc/invoices</generateDirectory>
-							<schemaIncludes>
-								<include>invoices.xsd</include>
-							</schemaIncludes>
-							<extension>true</extension>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 
 		<pluginManagement>
