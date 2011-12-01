@@ -12,8 +12,10 @@ import com.sun.jersey.api.client.ClientResponse.Status;
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.filter.LoggingFilter;
 import com.sun.jersey.api.json.JSONConfiguration;
+import com.sun.jersey.test.framework.AppDescriptor;
 import com.sun.jersey.test.framework.JerseyTest;
 import com.sun.jersey.test.framework.WebAppDescriptor;
+import com.thehpi.JAXBContextResolver;
 import com.thehpi.model.representation.MyJaxbBeans;
 
 public class WebAppTest extends JerseyTest {
@@ -24,11 +26,15 @@ public class WebAppTest extends JerseyTest {
 
 	private WebResource webResource;
 
-    public WebAppTest() throws Exception {
-		super(new WebAppDescriptor.Builder("com.thehpi").
-			initParam("com.sun.jersey.spi.container.ContainerResponseFilters", "com.sun.jersey.server.linking.LinkFilter").
-			build());
-    }
+	@Override
+	protected AppDescriptor configure()
+	{
+		WebAppDescriptor wad = new WebAppDescriptor.Builder("com.thehpi").build();
+
+		wad.getClientConfig().getClasses().add(JAXBContextResolver.class);
+
+		return wad;
+	}
 
 	@Before
 	public void setup()
